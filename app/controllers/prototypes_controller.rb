@@ -54,7 +54,7 @@ class PrototypesController < ApplicationController
   
   def move_to_index
     comment = Comment.find(params[:id])
-    unless current_user.id != comment.user_id
+    unless current_user.id != prototype.user_id
       redirect_to action: :index
     end
   end
